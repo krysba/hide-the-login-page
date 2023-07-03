@@ -20,8 +20,9 @@
 //way two
 function zmiana_strony_logowania() {
     $new_login = 'sandbox';
-    if (strpos( $_SERVER["REQUEST_URI"], '$new-login') === false ){
-               wp_safe_redirect(home_url('NonExistentPage'), 302 );
+    if (strpos( $_SERVER['REQUEST_URI'], $new_login) === false ) 
+    {
+               wp_safe_redirect( home_url('NonExistentPage'), 302 );
                exit();
 }
 
